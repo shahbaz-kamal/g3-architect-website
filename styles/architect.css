@@ -136,38 +136,63 @@ main {
 }
 /* main styling ends*/
 
-/* responsiveness */
-@media screen and (max-width: 576px) {
-  .navbar,
-  .nav-links,
-  .teams {
-    flex-direction: column;
-  }
-  .brand {
-    margin-bottom: 10px;
-  }
-  .team-image-container {
-    grid-template-columns: 1fr;
-  }
-  .feature-title {
-    margin-bottom: 10px;
-  }
+/* feature starts */
+.architect-daughter {
+  max-width: 1440px;
+
+  /* border: 2px solid red; */
+  margin-top: 130px;
+  gap: 146px;
+}
+.architect-daughter img {
+  border-radius: 8px;
 }
 
-@media screen and (min-width: 576px) and (max-width: 939px) {
-  .teams {
-    flex-direction: column;
-  }
-  .features {
-    margin: 50px auto;
-    /* width: 100%; */
-    /* text-align: center;
-  } */
-  }
-  .feature-title {
-    margin-bottom: 20px;
-  }
+.f-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 39px;
+  margin-bottom: 24px;
+  border-left: 5px solid #ff900e;
+  padding-left: 21px;
 }
+.f-description {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 586px;
+  margin-bottom: 30px;
+}
+.f-card {
+  margin-bottom: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+.f-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.f-card-description {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 514px;
+}
+#experience-badge {
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 8px;
+  /* max-width: 342px; */
+  margin-left: -92px;
+  margin-top: -123px;
+}
+#badge-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/* feature ends */
 /* Some facts starts */
 
 .section-title {
@@ -201,15 +226,122 @@ main {
   font-size: 1.25rem;
   font-weight: 600;
 }
-.facts-wrapper {
-  max-width: 540px;
-  margin: 0 auto;
-  text-align: left;
-}
+
 .fact-description {
-  max-width: 540px;
+  /* max-width: 540px; */
   /* margin: 0 auto; */
   /* text-align: left; */
 }
 
 /* Some facts Ends */
+
+/* Sponsor styling starts */
+.sponsors-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-top: 180px;
+  margin-bottom: 24px;
+}
+.sponsor-description {
+  text-align: center;
+  width: 542px;
+  margin-bottom: 50px;
+}
+.sponsor-image-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 150px;
+  margin-bottom: 128px;
+}
+.sponsor-image {
+  filter: grayscale(100%);
+}
+/* Sponsor styling ends */
+
+/* footer styling starts */
+
+.footer-container {
+  max-width: 1440px;
+  /* height: 100px; */
+  background-color: #fff4e7;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 38px 410px;
+}
+.footer-description-container {
+  justify-content: center;
+  align-items: center;
+}
+.footer-description {
+  font-size: 1.25rem;
+  text-align: center;
+}
+/* footer styling ends */
+
+/* responsiveness */
+@media screen and (max-width: 576px) {
+  .navbar,
+  .nav-links,
+  .teams,
+  .architect-daughter {
+    flex-direction: column;
+  }
+  .brand {
+    margin-bottom: 10px;
+  }
+  .team-image-container {
+    grid-template-columns: 1fr;
+  }
+  .feature-title {
+    margin-bottom: 10px;
+  }
+  .fact-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .sponsor-image-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  .architect-daughter img {
+    width: 100%;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 939px) {
+  .teams,
+  .architect-daughter {
+    flex-direction: column;
+  }
+  .features {
+    margin: 50px auto;
+    /* width: 100%; */
+    /* text-align: center;
+  } */
+  }
+  .feature-title {
+    margin-bottom: 20px;
+  }
+  .fact-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .sponsor-image-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+  }
+  .architect-daughter img {
+    width: 100%;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+    /* margin: 0 auto; */
+  }
+}
